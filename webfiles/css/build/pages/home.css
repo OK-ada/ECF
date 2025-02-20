@@ -694,7 +694,102 @@ main section h3 {
     }
 }
 
-/* Java */
+/* Burger menu */
+nav {
+    position: relative;
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    border-radius: 1rem;
+    text-align: center;
+    background: linear-gradient(235deg, rgb(24, 48, 84), rgb(64, 40, 113)); 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+#menu li {
+    list-style: none;
+    padding: 10px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 12px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+#menu li a:hover {
+    background: radial-gradient(circle at bottom left, #ed4621 0%, #a11368 100%);
+    color: #FFFFFF;
+    border-radius: 1rem;
+}
+
+
+/* Affichage du menu actif */
+#menu.active {
+    display: block;
+}
+
+/* Icône du burger */
+#burger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#burger-icon span {
+    background: white;
+    height: 4px;
+    width: 100%;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+/* Animation du menu burger */
+#burger-icon.active span:first-child {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#burger-icon.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#burger-icon.active span:last-child {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive : Affichage en version mobile */
+@media screen and (max-width: 768px) {
+    #menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: black;
+        text-align: center;
+    }
+
+    #menu.active {
+        display: flex;
+    }
+}
+
+
+
+/* Formulaire*/
 .error {
     border: 2px solid red;
 }

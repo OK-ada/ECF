@@ -1,4 +1,24 @@
+/* Burger menu */
+document.addEventListener("DOMContentLoaded", function () {
+    const burgerIcon = document.getElementById("burger-icon");
+    const menu = document.getElementById("menu");
 
+    burgerIcon.addEventListener("click", function () {
+        menu.classList.toggle("active");
+        burgerIcon.classList.toggle("active");
+    });
+
+    // Fermer le menu si on clique sur un lien
+    document.querySelectorAll("#menu a").forEach(link => {
+        link.addEventListener("click", function () {
+            menu.classList.remove("active");
+            burgerIcon.classList.remove("active");
+        });
+    });
+});
+
+
+/* Le Formulaire  */
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
     const lastname = document.querySelector("#lastname").value.trim();
