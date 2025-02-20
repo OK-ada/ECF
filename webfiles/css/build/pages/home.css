@@ -327,6 +327,23 @@ header section {
 .guests-container article:nth-child(n + 3) {
     flex: 1 1 calc(25% - 1.25rem);
 }
+#cosplay {
+    display: flex;
+    max-width: 1150px;
+}
+#cosplay .cosplay-container h2{
+    font-family: "Montserrat Semi Bold";
+    font-size: 2rem;
+}
+#cosplay .cosplay-container p{
+    font-family: "Roboto Mono Regular";
+    font-size: 1rem;
+    margin: 1rem;
+}
+#cosplay img{
+    width: 50%;
+    block-size: fit-content;
+}
 #partners {
     max-width: 1150px;
     margin: auto;
@@ -544,64 +561,58 @@ main section h3 {
     text-align: center;
 } /*# sourceMappingURL=home.css.map */
 
-/* Responsive tablet 768px   */
+/* === Tablette (768px) === */
 @media screen and (max-width: 768px) {
-    /* Ajustement de la navigation */
-    nav {
+    #burger-icon {
+        display: block;
+    }
+
+    .jv-contests img, .tcg-contests img {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .guests-container {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    #cosplay {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #cosplay img {
+        width: 100%;
+        max-width: 500px;
+    }
+    footer {
+        text-align: center;
+    }
+}
+
+/* === Mobile (499px) === */
+@media screen and (max-width: 499px) {
+    header {
         text-align: center;
     }
 
     nav a {
-        display: flex;
         flex-direction: column;
-        align-items: center;
     }
 
-    #burger-icon {
-        display: block; /* Assure-toi que le menu burger est bien affiché */
-    }
-
-    /* Ajustement des sections */
-    #intro {
-        text-align: center;
-        padding: 20px;
-    }
-
-    .jv-contests,
-    .tcg-contests {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .jv-contests img,
-    .tcg-contests img {
+    .partners-container div {
         width: 100%;
-        max-width: 500px;
     }
 
-    .guests-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-    }
-
-    .partners-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    /* Ajustement du footer */
-    footer {
-        text-align: center;
+    footer .mxwdth {
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .socials-links {
-        display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 }
