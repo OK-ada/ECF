@@ -1,7 +1,7 @@
 /* Burger menu */
 document.addEventListener("DOMContentLoaded", function () {
-    const burgerIcon = document.getElementById("burger-icon");
-    const menu = document.getElementById("menu");
+    const burgerIcon = document.querySelector("#burger-icon");
+    const menu = document.querySelector("#menu");
 
     burgerIcon.addEventListener("click", function () {
         menu.classList.toggle("active");
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const agreement = document.querySelector("#agreed").value;
 
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Empêche l'envoi du formulaire si des erreurs sont présentes
+        event.preventDefault(); 
         let isValid = true;
 
         // Réinitialisation des erreurs visuelles
