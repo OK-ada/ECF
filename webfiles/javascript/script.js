@@ -15,19 +15,15 @@ document.addEventListener("DOMContentLoaded", function () {
             burgerIcon.classList.remove("active");
         });
     });
-});
 
-
-/* Le Formulaire  */
-document.addEventListener("DOMContentLoaded", function () {
     const form = document.querySelector("form");
-    const lastname = document.querySelector("#lastname").value.trim();
-    const firstname = document.querySelector("#firstname").value.trim();
-    const email = document.querySelector("#email").value.trim();
-    const object = document.querySelector("#object").value.trim();
-    const message = document.querySelector("#message").value.trim();
-    const agreement = document.querySelector("#agreed").value;
-
+    const lastname = document.querySelector("#lastname");
+    const firstname = document.querySelector("#firstname");
+    const email = document.querySelector("#email");
+    const object = document.querySelector("#object");
+    const message = document.querySelector("#message");
+    const agreement = document.querySelector("#agreed");
+    console.log(firstname);
     form.addEventListener("submit", function (event) {
         event.preventDefault(); 
         let isValid = true;
@@ -36,23 +32,25 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".error").forEach(el => el.classList.remove("error"));
 
         // Fonction pour ajouter une erreur
+        
         function setError(input) {
+            console.log(input);
             input.classList.add("error");
             isValid = false;
         }
 
         // Validation des champs nom et prénom
         const nameRegex = /^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]{2,50}$/;
-        if (!nameRegex.test(firstname.value)) {
+        if (!nameRegex.test(firstname.value.trim())) {
             setError(firstname);
         }
-        if (!nameRegex.test(lastname.value)) {
+        if (!nameRegex.test(lastname.value.trim())) {
             setError(lastname);
         }
 
         // Validation de l'email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email.value)) {
+        if (!emailRegex.test(email.value.trim())) {
             setError(email);
         }
 
@@ -80,7 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-/*  
+/*   Exemple de Dimitri 
+
 const email = document.querySelector("#email").value;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

@@ -727,6 +727,8 @@ nav {
 }
 
 #menu li a {
+    font-family: "Roboto Mono Regular";
+    font-size: 1rem;
     text-decoration: none;
     color: white;
     display: block;
@@ -802,5 +804,5 @@ nav {
 
 /* Formulaire*/
 .error {
-    border: 2px solid red;
+    border: 1rem solid yellow;
 }
