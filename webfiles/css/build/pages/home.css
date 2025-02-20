@@ -561,7 +561,13 @@ main section h3 {
     text-align: center;
 } /*# sourceMappingURL=home.css.map */
 
-/* === Tablette (768px) === */
+@media screen and (max-width: 1093px) { 
+    #partners .partners-container {
+        flex-direction: column;
+        justify-content: center;  
+    }
+}
+/*  Tablette (768px) */
 @media screen and (max-width: 768px) {
     #burger-icon {
         display: block;
@@ -587,12 +593,13 @@ main section h3 {
         width: 100%;
         max-width: 500px;
     }
-    footer {
+    footer .mxwdth{
+        flex-direction: column-reverse;
         text-align: center;
     }
 }
 
-/* === Mobile (499px) === */
+/*  Mobile (499px)  */
 @media screen and (max-width: 499px) {
     header {
         text-align: center;
@@ -615,4 +622,79 @@ main section h3 {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Responsive pour écran 320px */
+@media screen and (max-width: 320px) {
+    /* Ajustement du texte */
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+    }
+
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav a {
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    /* Sections et images */
+    .jv-contests, .tcg-contests, .guests-container, #cosplay {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .jv-contests img, .tcg-contests img, #cosplay img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Ajustement des boutons */
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Partenaires */
+    .partners-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partners-container div {
+        width: 90%;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer .mxwdth {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .socials-links {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Java */
+.error {
+    border: 2px solid red;
 }
